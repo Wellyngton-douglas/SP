@@ -1,3 +1,4 @@
+{{ $slot }}
 <form action= {{ route('site.contato') }} method="post">
   @csrf
   <input name="nome" type="text" placeholder="Nome" class="{{ $classe }}">
@@ -13,7 +14,7 @@
       <option value="3">Reclamação</option>
   </select>
   <br>
-  <textarea class="{{ $classe }}" placeholder="Preencha aqui a sua mensagem"></textarea>
+  <textarea name="mensagem" class="{{ $classe }}" placeholder="Preencha aqui a sua mensagem"></textarea>
   <br>
-  <button name="mensagem" type="submit" class="{{ $classe }}">ENVIAR</button>
+  <button type="submit" class="{{ $classe }}">ENVIAR</button>
 </form>
